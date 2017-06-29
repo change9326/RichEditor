@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_material_dark">
+
+    <com.mryu.richeditor.RichEditor.RichEditor
+        android:id="@+id/richEditor"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@null"
+        android:gravity="left"
+        android:hint="请输入贴子内容"
+        android:padding="5dp"
+        android:maxLength="2000"
+        android:textColor="@color/white"
+        android:textColorHint="@color/graY" />
+
+    <Button
+        android:id="@+id/btn_at"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/richEditor"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="14dp"
+        android:text="\@" />
+
+    <Button
+        android:id="@+id/btn_topic"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/richEditor"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/btn_at"
+        android:text="\#" />
+
+    <Button
+        android:id="@+id/btn_emoji"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/richEditor"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/btn_topic"
+        android:text="Emoji" />
+
+    <Button
+        android:id="@+id/btn_get1"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btn_at"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="14dp"
+        android:text="Text" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_get1"
+        android:textColor="@color/white" />
+
+    <com.mryu.richeditor.RichEditor.widget.EmojiLayout
+        android:id="@+id/emojiLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+</RelativeLayout>
